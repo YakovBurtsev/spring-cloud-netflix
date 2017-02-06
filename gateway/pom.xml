@@ -21,13 +21,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-boot-starter-web.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zuul -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
-            <version>1.2.3.RELEASE</version>
+            <version>${spring-cloud-starter-zuul.version}</version>
         </dependency>
 
 
@@ -61,7 +59,7 @@
     <properties>
         <spring-cloud-dependencies.version>Brixton.SR7</spring-cloud-dependencies.version>
         <spring-cloud-starter-eureka.version>1.2.3.RELEASE</spring-cloud-starter-eureka.version>
-        <spring-boot-starter-web.version>1.4.2.RELEASE</spring-boot-starter-web.version>
+        <spring-cloud-starter-zuul.version>1.2.3.RELEASE</spring-cloud-starter-zuul.version>
     </properties>
 
 </project>
