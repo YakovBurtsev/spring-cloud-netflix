@@ -5,9 +5,8 @@ spring:
 zuul:
   ignored-services: '*'
   routes:
-    greeting:
-      path: /**
-      url: http://localhost:8081
+    client:
+      path: /service/**
 
 server:
   port: 8080
