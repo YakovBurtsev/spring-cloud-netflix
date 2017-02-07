@@ -3,6 +3,7 @@ spring:
     name: gateway
 
 zuul:
+  ignored-services: '*'
   routes:
     greeting:
       path: /**
