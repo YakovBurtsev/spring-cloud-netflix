@@ -18,8 +18,6 @@ import refresher.ZuulRefresher;
 @EnableEurekaClient
 @RestController
 public class SecondServiceApplication implements GreetingController {
-    @Autowired
-    private static ZuulRefresher zuulRefresher;
 
     @Autowired
     @Lazy
@@ -30,8 +28,6 @@ public class SecondServiceApplication implements GreetingController {
 
     public static void main(String[] args) {
         SpringApplication.run(SecondServiceApplication.class, args);
-        // should send post request to zuul /routes in order force a refresh of the existing routes
-        zuulRefresher.refresh();
     }
 
     @Override
