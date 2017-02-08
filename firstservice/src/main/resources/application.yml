@@ -1,6 +1,6 @@
 spring:
   application:
-    name: client
+    name: firstservice
 
 server:
   port: 8081

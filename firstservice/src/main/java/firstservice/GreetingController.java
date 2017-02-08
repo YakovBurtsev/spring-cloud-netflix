@@ -1,4 +1,4 @@
-package client;
+package firstservice;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 /**

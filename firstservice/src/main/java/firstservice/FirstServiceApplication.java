@@ -1,4 +1,4 @@
-package client;
+package firstservice;
 
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaClientApplication implements GreetingController {
+public class FirstServiceApplication implements GreetingController {
     @Autowired
     @Lazy
     private EurekaClient eurekaClient;
@@ -25,7 +25,7 @@ public class EurekaClientApplication implements GreetingController {
     private String appName;
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(FirstServiceApplication.class, args);
     }
 
     @Override

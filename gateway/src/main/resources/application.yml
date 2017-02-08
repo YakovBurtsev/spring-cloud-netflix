@@ -5,8 +5,8 @@ spring:
 zuul:
   ignored-services: '*'
   routes:
-    client:
-      path: /service/**
+    firstservice:
+      path: /firstservice/**
 
 server:
   port: 8080
