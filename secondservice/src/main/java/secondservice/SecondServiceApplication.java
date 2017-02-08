@@ -8,9 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import java.net.URI;
+import refresher.ZuulRefresher;
 
 /**
  * Created by SBT-Burtsev-YA on 06.02.2017.
@@ -21,6 +19,9 @@ import java.net.URI;
 @RestController
 public class SecondServiceApplication implements GreetingController {
     @Autowired
+    private static ZuulRefresher zuulRefresher;
+
+    @Autowired
     @Lazy
     private EurekaClient eurekaClient;
 
@@ -30,7 +31,7 @@ public class SecondServiceApplication implements GreetingController {
     public static void main(String[] args) {
         SpringApplication.run(SecondServiceApplication.class, args);
         // should send post request to zuul /routes in order force a refresh of the existing routes
-        new RestTemplate().postForObject("http://localhost:8080/routes", "", String.class);
+        zuulRefresher.refresh();
     }
 
     @Override

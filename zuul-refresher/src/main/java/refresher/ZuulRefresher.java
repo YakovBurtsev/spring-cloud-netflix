@@ -1,4 +1,4 @@
-package feign;
+package refresher;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @FeignClient("gateway")
-public interface GatewayRefresher {
+public interface ZuulRefresher {
     @RequestMapping(value = "/routes", method = RequestMethod.POST)
     void refresh();
 }
